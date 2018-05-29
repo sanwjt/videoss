@@ -1,0 +1,106 @@
+/*//game.gtimg.cn/images/game/cp/a20180131festival*/
+html, body{margin: 0;padding: 0; width: 100%; height: 100%;overflow: hidden; background-color: #000; }
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,figure{margin:0;padding:0;border:0;vertical-align:baseline}
+
+.pr{ position: relative; }
+.pa{ position: absolute; }
+.gpu{ -webkit-transform: translate(0,0,0); transform: translate(0,0,0); }
+
+/*跳过*/
+.skip-box{ position: relative; width: 13.34rem; height: 100%; }
+.skip-btn{ position: absolute; top: .4rem; right: .4rem; z-index: 10011; width: 1.82rem; height: .45rem; color: #575C69; font-size: .28rem; line-height: .5rem; text-align: center; text-decoration: none; text-indent: -9999em; background: url(//game.gtimg.cn/images/game/cp/a20180131festival/skip.png) no-repeat; background-size: 1.82rem; }
+
+/*loading*/
+.loading{ top: 0; left: 0; z-index: 9; width: 100%; height: 100%; }
+.btn-start{ position: absolute; top: 50%; left: 50%; z-index: 99; display: none; width: 139px; height: 163px; margin: -150px 0 0 -69px; -webkit-tap-highlight-color: transparent; }
+.btn-start b{ display: block; width: 139px; height: 98px; margin: 0 auto 35px; background: url(//game.gtimg.cn/images/game/cp/a20180131festival/btn-icon1.png) no-repeat; background-size: 100%; }
+.btn-start i{ display: block; width: 59px; height: 30px; margin: 0 auto; background: url(//game.gtimg.cn/images/game/cp/a20180131festival/btn-icon2.png) no-repeat; background-size: 100%; }
+.txt-box{ position: absolute; top: 50%; left: 50%; z-index: 2; -webkit-transform: translateX(-50%); width: 294px; height: 22px; margin-top: 69px; }
+.txt-box p{ position: absolute; top: 0; left: 0; right: 0; width: 294px; height: 22px; margin: 0 auto; background-repeat: no-repeat; background-position: center top; background-size: 100%; -webkit-transform: scale(1.3); }
+.txt-box .txt1{ background-image: url(//game.gtimg.cn/images/game/cp/a20180131festival/txt1.png); }
+.txt-box .txt2{ background-image: url(//game.gtimg.cn/images/game/cp/a20180131festival/txt2.png); }
+.icon-loading{ display: none; position: absolute; top: 50%; left: 50%; width: 50px; height: 50px; margin: -60px 0 0 -25px; background: url(//game.gtimg.cn/images/game/cp/a20180131festival/icon-loading.png) no-repeat; background-size: 100%; -webkit-animation: load 3s linear infinite; }
+.loading.ani .icon-loading{ display: block; }
+.loading.ani .txt-box{ display: none; }
+
+/*ending落地页*/
+.wrap { position: absolute; top: 0; left: 0; z-index: 9; width: 100%; height: 100%; transform-origin: 0 0; }
+.scrollBox { position: relative; width: 100%; height: 100%; overflow-y: auto; -webkit-overflow-scrolling: touch;transform: translate3d(0,0,0); background: #000;}
+.scrollBox img{ width: 100%; }
+.ending-bg{ width: 13.34rem; height: 21.92rem; background: url(//game.gtimg.cn/images/game/cp/a20180131festival/end.jpg) no-repeat; background-size: cover; }
+.ending .tips{ position: fixed; bottom: .95rem; left: 50%; z-index: 4; -webkit-transform: translate(-50%,0); width: .53rem; height: 1rem; background: url(//game.gtimg.cn/images/game/cp/a20180131festival/tips.png) no-repeat; background-size: 100%; }
+.ending .piao-box{ top: 0; left: 0; z-index: 6; width: 100%; height: 100%; pointer-events: none; }
+.ending .piao-box .piao{ position: absolute; top: 3.75rem; left: 6.67rem; z-index: 2; background-repeat: no-repeat; background-size: 100%; }
+.ending .piao-box .piao1{ margin: -1.8rem 0 0 -.84rem; width: 7.51rem; height: 6.48rem; background-image: url(//game.gtimg.cn/images/game/cp/a20180131festival/piao1.png); }
+.ending .piao-box .piao2{ z-index: 8; margin: 2.3rem 0 0 -3.15rem; width: 2.42rem; height: 2.09rem; background-image: url(//game.gtimg.cn/images/game/cp/a20180131festival/piao2.png); }
+.ending .piao-box .piao3{ left: 0; margin: -.6rem 0 0 0; width: 5.33rem; height: 3.5rem; background-image: url(//game.gtimg.cn/images/game/cp/a20180131festival/piao3.png); }
+.ending .piao-box .piao4{ margin: -3.75rem 0 0 -5.51rem; width: 4.71rem; height: 4.33rem; background-image: url(//game.gtimg.cn/images/game/cp/a20180131festival/piao4.png); }
+.ending .piao-box .piao5{ top: 0; margin: 0 0 0 .54rem; width: 5.44rem; height: 2.1rem; background-image: url(//game.gtimg.cn/images/game/cp/a20180131festival/piao5.png); }
+.ending .piao-box .piao6{ margin: -2.21rem 0 0 3.24rem; width: 3.43rem; height: 3.63rem; background-image: url(//game.gtimg.cn/images/game/cp/a20180131festival/piao6.png); }
+
+.ending .btn-box{ position: absolute; top: 19.79rem; left: 0; right: 0; display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; width: 6.47rem; margin: 0 auto; }
+.ending .btn-box a{ width: 2.64rem; height: .6rem; color: #000; font-size: 30px; line-height: 50px; text-align: center; -webkit-tap-highlight-color: transparent; text-indent: -999em; }
+
+/*假如添加了video标签,可能会出现video标签默认置顶的情况,解决这个bug可以通过样式设置来规避;*/
+.compatibleStyle {
+    backface-visibility:hidden;
+    -webkit-backface-visibility:hidden;	/* Chrome 和 Safari */
+    -moz-backface-visibility:hidden; 	/* Firefox */
+    -ms-backface-visibility:hidden; 	/* Internet Explorer */
+    -webkit-perspective: 0;
+    -webkit-transform: translate3d(0,0,0);
+    visibility:visible;
+}
+.share-bg{ position: fixed; top: 0; left: 0; z-index: 998; width: 100%; height: 100%; }
+.share-bg img{ height: 100%; }
+.share{ position: absolute; top: 0; left: 0; z-index: 999; width: 100%; height: 100%; background: rgba(0,0,0,.8); }
+.share img{ width: 100%; }
+.share .share-tips1{ display: none; position: absolute; top: .4rem; left: .4rem; z-index: 2; width: 3.73rem; height: 3.34rem; background: url(//game.gtimg.cn/images/game/cp/a20180131festival/share-tips1.png) no-repeat; background-size: 100%; }
+.share .share-tips2{ display: block; position: absolute; top: .4rem; right: .4rem; z-index: 2; width: 3.72rem; height: 3.28rem; background: url(//game.gtimg.cn/images/game/cp/a20180131festival/share-tips2.png) no-repeat; background-size: 100%; }
+@media all and (orientation : portrait ) {
+    .share .share-tips1{ display: block; }
+    .share .share-tips2{ display: none; }
+}
+
+.dou{ -webkit-animation: dou 1.2s ease-in-out infinite; -webkit-transform-origin: 50% -0%; }
+.tipsFlash{ -webkit-animation: tips 1.6s linear infinite; }
+.fadel{ -webkit-animation: fadel 1s ease-in-out both; }
+.fader{ -webkit-animation: fader 1s ease-in-out both; }
+.piaoFlash1{ -webkit-animation: piaoFlash 3s linear infinite alternate; }
+.piaoFlash2{ -webkit-animation: piaoFlash2 3s linear infinite alternate; }
+@-webkit-keyframes dou{
+    0%{ -webkit-transform: rotate(0); }
+    10%{ -webkit-transform: rotate(10deg); }
+    20%{ -webkit-transform: rotate(-10deg); }
+    30%{ -webkit-transform: rotate(10deg); }
+    40%{ -webkit-transform: rotate(-10deg); }
+    50%{ -webkit-transform: rotate(10deg); }
+    60%{ -webkit-transform: rotate(0); }
+    100%{ -webkit-transform: rotate(0); }
+}
+
+@-webkit-keyframes load{
+    0%{ -webkit-transform: rotate(0); }
+    100%{ -webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes tips{
+    0%{ opacity: 1; }
+    100%{ opacity: 0; -webkit-transform: translate(-50%,-15px); }
+}
+@-webkit-keyframes fadel{
+    0%{ opacity: 0; -webkit-transform: translate3d(-50px,0,0); }
+    100%{ opacity: 1; -webkit-transform: translate3d(0,0,0); }
+}
+@-webkit-keyframes fader{
+    0%{ opacity: 0; -webkit-transform: translate3d(50px,0,0); }
+    100%{ opacity: 1; -webkit-transform: translate3d(0,0,0); }
+}
+
+@-webkit-keyframes piaoFlash{
+    0%{ -webkit-transform: translate3d(0,5px,0); }
+    100%{ -webkit-transform: translate3d(0,0,0); }
+}
+@-webkit-keyframes piaoFlash2{
+    0%{ -webkit-transform: translate3d(0,-5px,0); }
+    100%{ -webkit-transform: translate3d(0,0,0); }
+}

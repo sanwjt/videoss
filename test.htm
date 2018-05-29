@@ -1,0 +1,127 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="gbk">
+	<meta name="author" content="Tencent-CP">
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=5,initial-scale=1.0,user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="Description" content="">
+	<meta name="Keywords" content="">
+	<title>星光盛典</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<script>
+    var w = document.documentElement.clientWidth || document.body.clientWidth;
+    document.documentElement.style.fontSize = (w/1334*100)+"px";
+
+    window.onresize = function()
+    {
+        var w = document.documentElement.clientWidth || document.body.clientWidth;
+        document.documentElement.style.fontSize = (w/1334*100)+"px";
+    }
+</script>
+<body>
+<!--//game.gtimg.cn/images/game/cp/a20180131festival-->
+<!--
+参数简易说明:
+1.view-mode = "v" "v"竖屏,"h"横屏;
+2.view-rotation="auto" 默认"auto" 自动旋转,"v"竖屏可视,"h"横屏可视;
+3.view-scale="exactfit" 缩放模式 默认"exactfit";
+                    "exactfit":高宽等于屏幕高宽;
+                    "noborder":裁剪铺满;
+                    "noscale":不缩放;
+                    "showall":显示全部;
+                    "width":宽度等于屏幕宽;
+                    "height":高度等于屏幕高;
+4.view-align="",默认为"" 居中;
+                    "t":靠顶;
+                    "l":靠左;
+                    "r":靠右;
+                    "b":靠底;
+                    可以结合一起用，比如"tl","tr","bl","br";
+5.view-width="400" 目标宽 默认"400";
+6.view-height="400" 目标高 默认"400";
+-->
+
+<div class="p-video" view-mode="h" view-rotation="auto" view-scale="noborder" view-width="1334" view-height="750" view-align="">
+	<!--加载页-->
+	<div class="loading pa compatibleStyle" id="loading" style="display: block;">
+		<a href="javascript:;" class="btn-start gpu" id="btn_start" ontouchend="PTTSendClick('btn','play video','播放视频');">
+			<b class=""></b>
+			<i></i>
+		</a>
+		<div class="txt-box">
+			<p class="txt1 gpu" style="display: none;"></p>
+			<p class="txt2 gpu" style="display: none;"></p>
+		</div>
+		<div class="icon-loading"></div>
+	</div>
+
+	<!--主视频-->
+	<div style="position: absolute;">
+		<video id="video" style="display:none;"></video>
+	</div>
+</div>
+<div id="wrap" class="wrap compatibleStyle" style="display: none;">
+	<!--跳过-->
+	<div class="skip-box" style="display: none;">
+		<a class="skip-btn compatibleStyle" href="javascript:;"  ontouchend="PTTSendClick('btn','skip','跳过');">跳过</a>
+	</div>
+
+	<!--ending落地页-->
+	<div class="ending scrollBox" id="ending" style="display: none;">
+		<div class="ending-bg">
+			<div class="tips tipsFlash"></div>
+			<div class="piao-box pa">
+				<div class="piaoFlash1">
+					<div class="piao piao1 fader"></div>
+					<div class="piao piao3 fadel"></div>
+					<div class="piao piao5 fader"></div>
+				</div>
+				<div class="piaoFlash2">
+					<div class="piao piao2 fadel"></div>
+					<div class="piao piao4 fadel"></div>
+					<div class="piao piao6 fader"></div>
+				</div>
+			</div>
+
+			<div class="btn-box">
+				<a class="btn1" href="javascript:;" ontouchend="PTTSendClick('btn','play video2','彩蛋');">按钮</a>
+				<a class="btn2" href="javascript:;" ontouchend="PTTSendClick('btn','share','分享');">分享</a>
+			</div>
+		</div>
+
+	</div>
+
+
+	<!--分享-->
+	<div class="share" style="display: none;">
+		<p class="share-tips1"></p>
+		<p class="share-tips2"></p>
+	</div>
+</div>
+
+
+<script src="//ossweb-img.qq.com/images/js/mmdPlugin/mmd-plugin.min.1.0.2.js"></script>
+<script src="//ossweb-img.qq.com/images/js/mmdVideoPlayer/mmd.videoplayer.min.1.0.1.js"></script>
+<script src="//ossweb-img.qq.com/images/js/zepto/zepto.modules.min.js"></script>
+<script src="//ossweb-img.qq.com/images/js/TGMobileShare/TGMobileShare.min.js"></script>
+<script src="//ossweb-img.qq.com/images/spiderMediaData/game_new/mediaURLData.js"></script>
+<script src="js/index.js"></script>
+<script src="//ossweb-img.qq.com/images/js/PTT/ping_tcss_tgideas_https_min.js"></script>
+<script>
+    //此段代码不能放到外链JS中，
+    var setSite = { //设置网站属性
+        siteType: "a20180131festival", //必填项:"os"代表是官网，如果不是，则填写actName例如a20160701xxx
+        pageType: "index", //必填项:本页面的定位；按照页面含义填写例如main||list||detail||download||share||page1||pageN
+        pageName: "首页", //必填项:页面中文名
+        osact: 0, //选填项:是否是官网专题(在官网运营的专题)boolean；默认是0；可以在链接上加入参数osact=1来灵活设置
+        ingame: 0, //选填项:是否投放在游戏APP内boolean；默认是0；可以在链接上加入参数ingame=1来灵活设置
+        stayTime: 0 //选填项:是否需要统计停留时长boolean；默认是0
+    }
+    if (typeof (pgvMain) == 'function') pgvMain();//千万不能忘记！
+</script>
+</body>
+</html>
